@@ -1,5 +1,6 @@
-package xyz.zhangyi.praticejava.framework.mockito;
+package xyz.zhangyi.practicejava.framework.mockito;
 
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -35,7 +36,7 @@ public class RosterTest {
 
         //then
         verify(mockReader, times(1)).read(fileName);
-        assertThat(employees).hasSize(2);
+        Assertions.assertThat(employees).hasSize(2);
         assertThat(employees.get(0).getName()).isEqualTo("zhangyi");
     }
 

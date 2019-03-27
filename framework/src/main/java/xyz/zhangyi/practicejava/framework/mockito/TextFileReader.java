@@ -1,4 +1,4 @@
-package xyz.zhangyi.praticejava.framework.mockito;
+package xyz.zhangyi.practicejava.framework.mockito;
 
 import java.util.ArrayList;
 import java.util.List;

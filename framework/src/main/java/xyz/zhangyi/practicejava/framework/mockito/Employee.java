@@ -1,4 +1,4 @@
-package xyz.zhangyi.praticejava.framework.mockito;
+package xyz.zhangyi.practicejava.framework.mockito;
 
 public class Employee {
     private String name;
