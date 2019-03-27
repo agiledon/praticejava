@@ -14,6 +14,7 @@
         <module>advance</module>
         <module>design</module>
         <module>framework</module>
+        <module>libraries</module>
     </modules>
 
     <properties>
