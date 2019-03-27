@@ -1,8 +1,7 @@
-package xyz.zhangyi.practicejava.stream;
+package xyz.zhangyi.practicejava.advance.java8.stream;
 
 import org.junit.Before;
 import org.junit.Test;
-import xyz.zhangyi.practicejava.stream.WordCounter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +31,4 @@ public class WordCounterTest {
         assertThat(countResult.get("java")).isEqualTo(3);
         assertThat(countResult.get("developer")).isEqualTo(1);
     }
-
 }

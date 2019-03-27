@@ -1,4 +1,4 @@
-package xyz.zhangyi.practicejava.stream;
+package xyz.zhangyi.practicejava.advance.java8.stream;
 
 import java.util.ArrayList;
 import java.util.HashMap;
