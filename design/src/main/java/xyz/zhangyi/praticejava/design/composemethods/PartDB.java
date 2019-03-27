@@ -1,9 +1,6 @@
 package xyz.zhangyi.praticejava.design.composemethods;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,7 +9,6 @@ public class PartDB {
     private static final String DB_URL = "";
     private static final String USER = "";
     private static final String PASSWORD = "";
-    private static final String SQL_SELECT_PARTS = "select * from part";
     private List<Part> partList = new ArrayList<Part>();
 
     public void populate() throws Exception {
@@ -21,7 +17,7 @@ public class PartDB {
             Class.forName(DRIVER_CLASS);
             c = DriverManager.getConnection(DB_URL, USER, PASSWORD);
             Statement stmt = c.createStatement();
-            ResultSet rs = stmt.executeQuery(SQL_SELECT_PARTS);
+            ResultSet rs = stmt.executeQuery("select * from part");
             while (rs.next()) {
                 Part p = new Part();
                 p.setName(rs.getString("name"));
@@ -29,8 +25,12 @@ public class PartDB {
                 p.setRetailPrice(rs.getDouble("retail_price"));
                 partList.add(p);
             }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         } finally {
-            c.close();
+            if (c != null) {
+                c.close();
+            }
         }
     }
 }

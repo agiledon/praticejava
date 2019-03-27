@@ -13,6 +13,7 @@
         <module>basic</module>
         <module>advance</module>
         <module>design</module>
+        <module>framework</module>
     </modules>
 
     <dependencies>
