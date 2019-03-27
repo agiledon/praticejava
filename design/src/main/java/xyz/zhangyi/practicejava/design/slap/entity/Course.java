@@ -1,4 +1,4 @@
-package xyz.zhangyi.slap.entity;
+package xyz.zhangyi.practicejava.design.slap.entity;
 
 public class Course {
     public static final int ENTERPRISE = 0;

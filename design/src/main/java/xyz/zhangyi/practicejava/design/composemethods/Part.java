@@ -1,4 +1,4 @@
-package xyz.zhangyi.praticejava.design.composemethods;
+package xyz.zhangyi.practicejava.design.composemethods;
 
 public class Part {
     private String name;

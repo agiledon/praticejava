@@ -1,4 +1,4 @@
-package xyz.zhangyi.praticejava.design.composemethods;
+package xyz.zhangyi.practicejava.design.composemethods;
 
 import java.sql.*;
 import java.util.ArrayList;

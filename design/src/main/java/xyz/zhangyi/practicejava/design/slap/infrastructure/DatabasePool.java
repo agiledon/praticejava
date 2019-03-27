@@ -1,4 +1,4 @@
-package xyz.zhangyi.slap.infrastructure;
+package xyz.zhangyi.practicejava.design.slap.infrastructure;
 
 import java.sql.Connection;
 

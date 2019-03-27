@@ -1,9 +1,9 @@
-package xyz.zhangyi.slap.service;
+package xyz.zhangyi.practicejava.design.slap.service;
 
 
-import xyz.zhangyi.slap.entity.Customer;
-import xyz.zhangyi.slap.entity.Training;
-import xyz.zhangyi.slap.infrastructure.DatabasePool;
+import xyz.zhangyi.practicejava.design.slap.entity.Customer;
+import xyz.zhangyi.practicejava.design.slap.entity.Training;
+import xyz.zhangyi.practicejava.design.slap.infrastructure.DatabasePool;
 
 import java.sql.*;
 import java.util.List;
