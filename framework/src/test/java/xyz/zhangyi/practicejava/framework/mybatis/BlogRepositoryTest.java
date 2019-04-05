@@ -2,7 +2,7 @@ package xyz.zhangyi.practicejava.framework.mybatis;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import xyz.zhangyi.practicejava.framework.mybatis.model.Blog;
+import xyz.zhangyi.practicejava.framework.mybatis.model.Administrator;
 
 import java.util.Date;
 import java.util.UUID;
@@ -31,7 +31,7 @@ public class BlogRepositoryTest {
     public void should_post_and_remove_blog() {
         String blogId = UUID.randomUUID().toString();
 
-        Blog blog = new Blog();
+        Administrator blog = new Administrator();
         blog.setId(blogId);
         blog.setTitle("test");
         blog.setAuthor("test");

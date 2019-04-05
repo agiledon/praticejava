@@ -1,8 +1,8 @@
 package xyz.zhangyi.practicejava.framework.mybatis;
 
 import xyz.zhangyi.practicejava.framework.mybatis.gateway.MyBatisGateway;
-import xyz.zhangyi.practicejava.framework.mybatis.mapper.BlogMapper;
-import xyz.zhangyi.practicejava.framework.mybatis.model.Blog;
+import xyz.zhangyi.practicejava.framework.mybatis.mapper.StudentMapper;
+import xyz.zhangyi.practicejava.framework.mybatis.model.Administrator;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,33 +11,33 @@ public class BlogRepository {
     private MyBatisGateway myBatis = new MyBatisGateway();
 
     public BlogRepository() {
-        myBatis.registerMappers(BlogMapper.class);
+        myBatis.registerMappers(StudentMapper.class);
     }
 
-    public Optional<Blog> find(String blogId) {
+    public Optional<Administrator> find(String blogId) {
         return myBatis.executeQuery(session -> {
-            BlogMapper mapper = session.getMapper(BlogMapper.class);
+            StudentMapper mapper = session.getMapper(StudentMapper.class);
             return mapper.selectBlog(blogId);
         });
     }
 
-    public Optional<List<Blog>> findAll() {
+    public Optional<List<Administrator>> findAll() {
         return myBatis.executeQuery(session -> {
-            BlogMapper mapper = session.getMapper(BlogMapper.class);
+            StudentMapper mapper = session.getMapper(StudentMapper.class);
             return mapper.selectAll();
         });
     }
 
-    public void postBlog(Blog blog) {
+    public void postBlog(Administrator blog) {
         myBatis.executeCommand(session -> {
-            BlogMapper mapper = session.getMapper(BlogMapper.class);
+            StudentMapper mapper = session.getMapper(StudentMapper.class);
             mapper.insertBlog(blog);
         });
     }
 
     public void removeBlog(String blogId) {
         myBatis.executeCommand(session -> {
-            BlogMapper mapper = session.getMapper(BlogMapper.class);
+            StudentMapper mapper = session.getMapper(StudentMapper.class);
             mapper.deleteBlog(blogId);
         });
     }
