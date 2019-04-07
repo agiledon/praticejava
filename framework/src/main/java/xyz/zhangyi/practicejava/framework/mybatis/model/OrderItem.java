@@ -6,8 +6,8 @@ import java.time.LocalDateTime;
 
 @Data
 public class OrderItem {
-    private int id;
-    private int orderId;
+    private String id;
+    private String orderId;
     private Training training;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

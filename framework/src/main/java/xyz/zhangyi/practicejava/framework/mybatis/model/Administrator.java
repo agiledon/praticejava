@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Administrator {
-    private int id;
+    private String id;
     private String name;
     private String email;
     private LocalDateTime createdAt;

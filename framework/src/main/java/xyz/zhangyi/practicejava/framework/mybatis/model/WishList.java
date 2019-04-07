@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class WishList {
-    private int studentId;
-    private int courseId;
+    private String studentId;
+    private String courseId;
 }

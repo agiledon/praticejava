@@ -6,9 +6,9 @@ import java.time.LocalDateTime;
 
 @Data
 public class Payment {
-    private int id;
-    private int studentId;
-    private int orderId;
+    private String id;
+    private String studentId;
+    private String orderId;
     private double amount;
     private String paymentStyle;
     private PaymentStatus status;

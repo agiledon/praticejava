@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Course {
-    private int id;
+    private String id;
     private Teacher teacher;
     private String name;
     private String description;
@@ -15,7 +15,8 @@ public class Course {
     private String outline;
     private double price;
     private int duration;
-    private int createdBy;
+    private Category category;
+    private String createdBy;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

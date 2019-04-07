@@ -18,7 +18,7 @@ public class OrderService {
         this.orderMapper = orderMapper;
     }
 
-    public Order getOrder(int orderId) {
+    public Order getOrder(String orderId) {
         return orderMapper.getOrder(orderId);
     }
 }

@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Calendar {
-    private int id;
+    private String id;
     private int courseId;
     private String place;
     private Date startDate;

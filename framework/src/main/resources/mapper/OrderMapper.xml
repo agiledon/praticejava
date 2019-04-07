@@ -5,9 +5,9 @@
 <mapper namespace="xyz.zhangyi.practicejava.framework.mybatis.mapper.OrderMapper">
     <resultMap id="order" type="xyz.zhangyi.practicejava.framework.mybatis.model.Order">
         <constructor>
-            <idArg column="orderId" javaType="int" />
+            <idArg column="orderId" javaType="String" />
         </constructor>
-        <result property="status" column="orderStatus" javaType="xyz.zhangyi.practicejava.framework.mybatis.model.OrderStatus" />
+        <result property="status" column="orderStatus" typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
         <association property="student" javaType="xyz.zhangyi.practicejava.framework.mybatis.model.Student">
             <id property="id" column="studentId" />
             <result property="name" column="studentName" />

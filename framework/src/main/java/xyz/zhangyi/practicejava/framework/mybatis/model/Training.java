@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Training {
-    private int id;
+    private String id;
     private Student student;
     private Course course;
     private Calendar calendar;

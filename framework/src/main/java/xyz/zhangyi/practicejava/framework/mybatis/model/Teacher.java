@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Teacher {
-    private int id;
+    private String id;
     private String name;
     private String organization;
     private String title;
