@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 public class OrderItem {
     private int id;
     private int orderId;
-    private int trainingId;
+    private Training training;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

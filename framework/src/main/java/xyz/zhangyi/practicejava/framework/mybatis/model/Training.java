@@ -7,8 +7,9 @@ import java.time.LocalDateTime;
 @Data
 public class Training {
     private int id;
-    private int studentId;
-    private int calendarId;
+    private Student student;
+    private Course course;
+    private Calendar calendar;
     private double price;
     private LocalDateTime subscribedTime;
     private LocalDateTime createdAt;

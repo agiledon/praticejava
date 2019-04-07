@@ -14,4 +14,9 @@
             </dataSource>
         </environment>
     </environments>
+
+    <mappers>
+        <mapper resource="mapper/WishListMapper.xml"/>
+        <mapper resource="mapper/OrderMapper.xml"/>
+    </mappers>
 </configuration>

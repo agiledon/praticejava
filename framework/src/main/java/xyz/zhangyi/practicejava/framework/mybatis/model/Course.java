@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 @Data
 public class Course {
     private int id;
-    private int teacherId;
+    private Teacher teacher;
     private String name;
     private String description;
     private String earning;

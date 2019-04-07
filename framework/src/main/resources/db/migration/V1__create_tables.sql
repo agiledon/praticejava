@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS t_training
 (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   studentId INT NOT NULL REFERENCES t_student(id),
+  courseId INT NOT NULL REFERENCES t_course(id),
   calendarId INT NOT NULL REFERENCES t_calendar(id),
   price DECIMAL(5,2) NOT NULL,
   subscribedTime DATETIME NOT NULL,
