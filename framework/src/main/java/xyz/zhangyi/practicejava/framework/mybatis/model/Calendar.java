@@ -3,7 +3,7 @@ package xyz.zhangyi.practicejava.framework.mybatis.model;
 import lombok.Data;
 
 import java.sql.Date;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Data
 public class Calendar {
@@ -13,6 +13,6 @@ public class Calendar {
     private Date startDate;
     private Date endDate;
     private CalendarStatus status;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 }

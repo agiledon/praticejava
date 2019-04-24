@@ -2,8 +2,7 @@ package xyz.zhangyi.practicejava.framework.mybatis.model;
 
 import lombok.Data;
 
-import java.sql.Time;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Data
 public class Student {
@@ -11,7 +10,7 @@ public class Student {
     private String name;
     private String email;
     private String mobilePhone;
-    private Time registeredTime;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private Timestamp registeredTime;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 }

@@ -4,8 +4,7 @@
 
 USE training;
 
-CREATE TABLE IF NOT EXISTS t_administrator
-(
+CREATE TABLE IF NOT EXISTS t_administrator(
   id VARCHAR(36) PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
@@ -13,8 +12,7 @@ CREATE TABLE IF NOT EXISTS t_administrator
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_teacher
-(
+CREATE TABLE IF NOT EXISTS t_teacher(
   id VARCHAR(36) PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   organization VARCHAR(50) NOT NULL,
@@ -24,16 +22,14 @@ CREATE TABLE IF NOT EXISTS t_teacher
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_category
-(
+CREATE TABLE IF NOT EXISTS t_category(
   id VARCHAR(36) PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   createdAt DATETIME NOT NULL,
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_course
-(
+CREATE TABLE IF NOT EXISTS t_course(
   id VARCHAR(36) PRIMARY KEY,
   teacherId VARCHAR(36) NOT NULL REFERENCES t_teacher(id),
   name VARCHAR(50) NOT NULL UNIQUE,
@@ -49,8 +45,7 @@ CREATE TABLE IF NOT EXISTS t_course
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_calendar
-(
+CREATE TABLE IF NOT EXISTS t_calendar(
   id VARCHAR(36) PRIMARY KEY,
   courseId VARCHAR(36) NOT NULL REFERENCES t_course(id),
   place VARCHAR(50) NOT NULL,
@@ -61,8 +56,7 @@ CREATE TABLE IF NOT EXISTS t_calendar
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_student
-(
+CREATE TABLE IF NOT EXISTS t_student(
   id VARCHAR(36) PRIMARY KEY,
   name VARCHAR(50) NOT NULL,
   email VARCHAR(50) NOT NULL,
@@ -72,15 +66,13 @@ CREATE TABLE IF NOT EXISTS t_student
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_wish_list
-(
+CREATE TABLE IF NOT EXISTS t_wish_list(
   studentId VARCHAR(36) NOT NULL REFERENCES t_student(id),
   courseId VARCHAR(36) NOT NULL REFERENCES t_course(id),
   PRIMARY KEY(studentId, courseId)
 );
 
-CREATE TABLE IF NOT EXISTS t_training
-(
+CREATE TABLE IF NOT EXISTS t_training(
   id VARCHAR(36) PRIMARY KEY,
   studentId VARCHAR(36) NOT NULL REFERENCES t_student(id),
   courseId VARCHAR(36) NOT NULL REFERENCES t_course(id),
@@ -91,8 +83,7 @@ CREATE TABLE IF NOT EXISTS t_training
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_order
-(
+CREATE TABLE IF NOT EXISTS t_order(
   id VARCHAR(36) PRIMARY KEY,
   studentId VARCHAR(36) NOT NULL REFERENCES t_student(id),
   status ENUM('New', 'Paid', 'Confirmed', 'Completed') NOT NULL,
@@ -101,8 +92,7 @@ CREATE TABLE IF NOT EXISTS t_order
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_order_item
-(
+CREATE TABLE IF NOT EXISTS t_order_item(
   id VARCHAR(36) PRIMARY KEY,
   orderId VARCHAR(36) NOT NULL REFERENCES t_order(id),
   trainingId VARCHAR(36) NOT NULL REFERENCES t_training(id),
@@ -110,8 +100,7 @@ CREATE TABLE IF NOT EXISTS t_order_item
   updatedAt DATETIME NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS t_payment
-(
+CREATE TABLE IF NOT EXISTS t_payment(
   id VARCHAR(36) PRIMARY KEY,
   studentId VARCHAR(36) NOT NULL REFERENCES t_student(id),
   orderId VARCHAR(36) NOT NULL REFERENCES t_order(id),

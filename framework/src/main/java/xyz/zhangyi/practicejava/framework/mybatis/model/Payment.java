@@ -2,7 +2,7 @@ package xyz.zhangyi.practicejava.framework.mybatis.model;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Data
 public class Payment {
@@ -12,7 +12,7 @@ public class Payment {
     private double amount;
     private String paymentStyle;
     private PaymentStatus status;
-    private LocalDateTime transactionTime;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private Timestamp transactionTime;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 }

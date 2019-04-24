@@ -2,7 +2,7 @@ package xyz.zhangyi.practicejava.framework.mybatis.model;
 
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Data
 public class Training {
@@ -11,7 +11,7 @@ public class Training {
     private Course course;
     private Calendar calendar;
     private double price;
-    private LocalDateTime subscribedTime;
-    private LocalDateTime createdAt;
-    private LocalDateTime updatedAt;
+    private Timestamp subscribedTime;
+    private Timestamp createdAt;
+    private Timestamp updatedAt;
 }

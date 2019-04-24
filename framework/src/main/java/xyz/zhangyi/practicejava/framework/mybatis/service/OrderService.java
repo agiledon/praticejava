@@ -19,6 +19,10 @@ public class OrderService {
     }
 
     public Order getOrder(String orderId) {
-        return orderMapper.getOrder(orderId);
+        Order order = orderMapper.getOrder(orderId);
+        if (order == null) {
+            throw new ApplicationException(String.format("Order by id %s is not found", orderId));
+        }
+        return order;
     }
 }
