@@ -1,6 +1,6 @@
 package xyz.zhangyi.practicejava.design.oo.report.engine;
 
-public class SimpleParameter implements Parameter{
+public class SimpleParameter implements Parameter {
 
     private Object[] value;
 

@@ -3,8 +3,8 @@ package xyz.zhangyi.practicejava.design.oo.report.web;
 import xyz.zhangyi.practicejava.design.oo.report.engine.*;
 import xyz.zhangyi.practicejava.design.oo.report.servlet.ServletHttpRequest;
 
-public class ParameterCollector {
-    private void fillParameters(ServletHttpRequest request, ParameterGraph parameterGraph) {
+public class ParameterController {
+    public void fillParameters(ServletHttpRequest request, ParameterGraph parameterGraph) {
         for (Parameter para : parameterGraph.getParmaeters()) {
             if (para instanceof SimpleParameter) {
                 SimpleParameter simplePara = (SimpleParameter) para;
