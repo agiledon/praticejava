@@ -26,7 +26,7 @@ public class RosterTest {
         Roster roster = new Roster();
 
         String fileName = "roster.txt";
-        TextFileReader mockReader = mock(TextFileReader.class);
+        TextFileReader mockReader = mock(PlainTextFileReader.class);
         when(mockReader.read(fileName)).thenReturn(mockResult);
 
         roster.setReader(mockReader);
@@ -40,10 +40,4 @@ public class RosterTest {
         assertThat(employees.get(0).getName()).isEqualTo("zhangyi");
     }
 
-    private class MockTextFileReader extends TextFileReader {
-        @Override
-        public List<String> read(String fileName) {
-            return mockResult;
-        }
-    }
 }

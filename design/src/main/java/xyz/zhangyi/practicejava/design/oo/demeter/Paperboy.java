@@ -6,7 +6,7 @@ public class Paperboy {
         if (theWallet.getTotalMoney() > payment) {
             theWallet.subtractMoney(payment);
         } else {
-            //money not enough
+            throw new NotEnoughMoneyException("Money is not enough", new Exception());
         }
     }
 }

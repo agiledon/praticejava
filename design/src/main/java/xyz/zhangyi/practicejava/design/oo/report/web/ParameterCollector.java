@@ -1,14 +1,14 @@
 package xyz.zhangyi.practicejava.design.oo.report.web;
 
 import xyz.zhangyi.practicejava.design.oo.report.engine.*;
-import xyz.zhangyi.practicejava.design.oo.report.servlet.ServletRequest;
+import xyz.zhangyi.practicejava.design.oo.report.servlet.ServletHttpRequest;
 
 public class ParameterCollector {
-    private void fillParameters(ServletRequest request, ParameterGraph parameterGraph) {
+    private void fillParameters(ServletHttpRequest request, ParameterGraph parameterGraph) {
         for (Parameter para : parameterGraph.getParmaeters()) {
             if (para instanceof SimpleParameter) {
                 SimpleParameter simplePara = (SimpleParameter) para;
-                String[] values = request.getParameterValues(para.getName());
+                String[] values = request.getParameterValues(simplePara.getName());
                 simplePara.setValue(values);
             } else {
                 if (para instanceof ItemParameter) {
