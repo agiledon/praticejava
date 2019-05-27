@@ -9,11 +9,11 @@ import static org.assertj.core.api.Java6Assertions.assertThatThrownBy;
 public class PaperboyTest {
 
     private Customer customer;
-    private Paperboy paperboy;
+    private Cashier paperboy;
 
     @Before
     public void setUp() throws Exception {
-        paperboy = new Paperboy();
+        paperboy = new Cashier();
     }
 
     @Test
