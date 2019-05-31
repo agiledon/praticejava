@@ -5,9 +5,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import xyz.zhangyi.practicejava.framework.spring.di.CDPlayerConfig;
-import xyz.zhangyi.practicejava.framework.spring.di.CompactDisc;
-import xyz.zhangyi.practicejava.framework.spring.di.autowired.MediaPlayer;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

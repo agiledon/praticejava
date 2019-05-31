@@ -15,12 +15,12 @@ public class MyTask implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Executing task with number:" + taskNumber);
+        System.out.println("***MyTask: Executing task with number:" + taskNumber);
         try {
             Thread.currentThread().sleep(4000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(String.format("Task with number %d is finished", taskNumber));
+        System.out.println(String.format("***MyTask:Task with number %d is finished", taskNumber));
     }
 }

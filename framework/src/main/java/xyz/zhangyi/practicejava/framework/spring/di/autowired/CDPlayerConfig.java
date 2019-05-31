@@ -1,4 +1,4 @@
-package xyz.zhangyi.practicejava.framework.spring.di;/*                                                                      *\
+package xyz.zhangyi.practicejava.framework.spring.di.autowired;/*                                                                      *\
 **                                                                      **
 **      __  __ _________ _____          ©Mort BI                        **
 **     |  \/  / () | () |_   _|         (c) 2015                        **
@@ -6,6 +6,10 @@ package xyz.zhangyi.practicejava.framework.spring.di;/*                         
 **                                                                      **
 \*                                                                      */
 
-public interface CompactDisc {
-    String play();
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentScan
+public class CDPlayerConfig {
 }

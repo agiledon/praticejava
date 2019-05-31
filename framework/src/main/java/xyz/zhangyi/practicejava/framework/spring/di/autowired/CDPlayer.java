@@ -2,7 +2,6 @@ package xyz.zhangyi.practicejava.framework.spring.di.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import xyz.zhangyi.practicejava.framework.spring.di.CompactDisc;
 
 @Component
 public class CDPlayer implements MediaPlayer {

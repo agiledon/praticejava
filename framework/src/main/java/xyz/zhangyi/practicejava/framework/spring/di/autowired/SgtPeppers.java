@@ -1,4 +1,4 @@
-package xyz.zhangyi.practicejava.framework.spring.di;
+package xyz.zhangyi.practicejava.framework.spring.di.autowired;
 
 import org.springframework.stereotype.Component;
 
