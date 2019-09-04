@@ -9,13 +9,28 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MergingTest {
-    @Data
     class Address {
         private String country;
         private String city;
 
         public Address(String country, String city) {
             this.country = country;
+            this.city = city;
+        }
+
+        public String getCountry() {
+            return country;
+        }
+
+        public void setCountry(String country) {
+            this.country = country;
+        }
+
+        public String getCity() {
+            return city;
+        }
+
+        public void setCity(String city) {
             this.city = city;
         }
     }
@@ -51,7 +66,6 @@ public class MergingTest {
         }
     }
 
-    @Data
     class Employee implements Merging<Employee> {
         @MergeOn(level = Level.Ignore)
         private String name;
@@ -69,6 +83,54 @@ public class MergingTest {
             this.name = name;
             this.address = address;
             this.age = age;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public Address getAddress() {
+            return address;
+        }
+
+        public void setAddress(Address address) {
+            this.address = address;
+        }
+
+        public Email getEmail() {
+            return email;
+        }
+
+        public void setEmail(Email email) {
+            this.email = email;
+        }
+
+        public int getAge() {
+            return age;
+        }
+
+        public void setAge(int age) {
+            this.age = age;
+        }
+
+        public List<Score> getScores() {
+            return scores;
+        }
+
+        public void setScores(List<Score> scores) {
+            this.scores = scores;
+        }
+
+        public Printer getPrinter() {
+            return printer;
+        }
+
+        public void setPrinter(Printer printer) {
+            this.printer = printer;
         }
     }
 

@@ -1,8 +1,5 @@
 package xyz.zhangyi.practicejava.advance.cocurrency.immutable;
 
-import jdk.nashorn.internal.ir.annotations.Immutable;
-
-@Immutable
 public final class Money {
     private final int faceValue;
     private final Currency currency;
