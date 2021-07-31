@@ -87,7 +87,15 @@
             <version>4.3.7.RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>com.sun</groupId>
+            <artifactId>tools</artifactId>
+            <version>1.8.0_45</version>
+            <scope>system</scope>
+            <systemPath>/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home/lib/tools.jar</systemPath>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
