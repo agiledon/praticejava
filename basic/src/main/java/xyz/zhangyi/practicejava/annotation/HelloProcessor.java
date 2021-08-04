@@ -1,5 +1,6 @@
 package xyz.zhangyi.practicejava.annotation;
 
+import com.google.auto.service.AutoService;
 import com.sun.tools.javac.api.JavacTrees;
 import com.sun.tools.javac.model.JavacElements;
 import com.sun.tools.javac.processing.JavacProcessingEnvironment;
@@ -18,6 +19,7 @@ import java.util.Set;
 
 @SupportedAnnotationTypes("xyz.zhangyi.practicejava.annotation.Hello")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
+@AutoService(Processor.class)
 public class HelloProcessor extends AbstractProcessor {
     private Messager messager;
     private JavacTrees trees;

@@ -1,5 +1,6 @@
 package xyz.zhangyi.practicejava.annotation;
 
+import com.google.auto.service.AutoService;
 import com.sun.source.tree.Tree;
 import com.sun.tools.javac.api.JavacTrees;
 import com.sun.tools.javac.code.Flags;
@@ -18,7 +19,7 @@ import java.util.Set;
 
 @SupportedAnnotationTypes("xyz.zhangyi.practicejava.annotation.MyGetter")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-//@AutoService(Process.class)
+@AutoService(Processor.class)
 public class GetterProcessor extends AbstractProcessor {
     private Messager messager;
     private JavacTrees trees;
