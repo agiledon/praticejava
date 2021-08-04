@@ -1,6 +1,5 @@
 package xyz.zhangyi.practicejava.annotation;
 
-import com.google.auto.service.AutoService;
 import com.sun.tools.javac.api.JavacTrees;
 import com.sun.tools.javac.model.JavacElements;
 import com.sun.tools.javac.processing.JavacProcessingEnvironment;
@@ -19,7 +18,6 @@ import java.util.Set;
 
 @SupportedAnnotationTypes("xyz.zhangyi.practicejava.annotation.Hello")
 @SupportedSourceVersion(SourceVersion.RELEASE_8)
-@AutoService(Process.class)
 public class HelloProcessor extends AbstractProcessor {
     private Messager messager;
     private JavacTrees trees;
@@ -42,7 +40,8 @@ public class HelloProcessor extends AbstractProcessor {
         final JavacElements elementUtils = (JavacElements) processingEnv.getElementUtils();
 
         for (Element element : roundEnv.getElementsAnnotatedWith(Hello.class)) {
-            JCTree.JCMethodDecl jcMethodDecl = (JCTree.JCMethodDecl)element;
+
+            JCTree.JCMethodDecl jcMethodDecl = (JCTree.JCMethodDecl) elementUtils.getTree(element);
             messager.printMessage(Diagnostic.Kind.NOTE, jcMethodDecl.getName() + " found.");
 
             treeMaker.pos = jcMethodDecl.pos;
